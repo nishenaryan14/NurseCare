@@ -28,8 +28,8 @@ async function bootstrap() {
   }));
 
   // Use PORT from environment or default to 3001
-  const port = process.env.PORT || 3001;
-  await app.listen(port);
+  const port = parseInt(process.env.PORT || '3001', 10);
+  await app.listen(port, '0.0.0.0');
   
   console.log(`🚀 Backend running on port ${port}`);
 }

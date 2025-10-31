@@ -24,7 +24,7 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     ports:
-      - "3000:3000"
+      - "3001:3001"
     environment:
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/nursing_dev?schema=public
       JWT_SECRET: verysecret_dev_key
